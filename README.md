@@ -1,4 +1,4 @@
-# docker-getdns-stubby (Updated using cmake to wotk with getdns v1.6.0+)
+# docker-getdns-stubby (Updated using cmake to work with getdns v1.6.0+)
 (Working on Raspberry Pi)
 
 This Dockerfile is based on the blog post by Stéphan Bortzmeyer [Quad9, un résolveur DNS public, et avec sécurité](http://www.bortzmeyer.org/quad9.html/) 
@@ -13,8 +13,8 @@ This image will not get you a caching dns, just the dns over tls via Quad9 with 
 
 ## run the container
 
-To run inside your own dockernetwork to communicate between docker containers:
-``docker run -d --name getdns-stubby --network ("Create new dockernetwork")  --restart=unless-stopped --hostname=stubby  getdns-stubby``
+To run inside your own docker network to communicate between docker containers:
+``docker run -d --name getdns-stubby --network ("Create new docker network")  --restart=unless-stopped --hostname=stubby  getdns-stubby``
 
 To run with exposed port:
 ``docker run -d --name getdns-stubby -p 8053:8053 --restart=unless-stopped --hostname=stubby getdns-stubby``
